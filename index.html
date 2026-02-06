@@ -6,41 +6,37 @@
     <title>KSEAB | Karnataka School Examination and Assessment Board</title>
     <link rel="stylesheet" href="styles.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600&family=Source+Serif+4:wght@400;500;600&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/cmun-serif.css"
     />
   </head>
   <body>
     <header class="site-header">
       <div class="nav-shell">
-        <div class="brand">
+        <a class="brand" href="index.html" aria-label="KSEAB home">
           <div class="brand-mark">K</div>
           <div class="brand-text">
             <span data-i18n data-en="Karnataka School Examination" data-kn="ಕರ್ನಾಟಕ ಶಾಲಾ ಪರೀಕ್ಷೆ"></span>
             <span data-i18n data-en="and Assessment Board" data-kn="ಮೌಲ್ಯಮಾಪನ ಮಂಡಳಿ"></span>
           </div>
-        </div>
+        </a>
         <nav class="main-nav">
           <a href="#about" data-i18n data-en="About" data-kn="ನಮ್ಮ ಬಗ್ಗೆ"></a>
-          <a href="#sslc" data-i18n data-en="SSLC" data-kn="ಎಸೆಸ್ಸೆಲ್ಸಿ"></a>
-          <a href="#puc" data-i18n data-en="PUC" data-kn="ಪಿಯುಸಿ"></a>
+          <a href="sslc.html" data-i18n data-en="SSLC" data-kn="ಎಸೆಸ್ಸೆಲ್ಸಿ"></a>
+          <a href="puc.html" data-i18n data-en="PUC" data-kn="ಪಿಯುಸಿ"></a>
           <a href="#services" data-i18n data-en="Services" data-kn="ಸೇವೆಗಳು"></a>
           <a href="#gallery" data-i18n data-en="Gallery" data-kn="ಗ್ಯಾಲರಿ"></a>
           <a href="#contact" data-i18n data-en="Contact" data-kn="ಸಂಪರ್ಕ"></a>
         </nav>
         <div class="nav-actions">
           <button class="chip" type="button" id="lang-toggle" data-lang="en">English</button>
-          <button class="icon-button" type="button" aria-label="Search">
+          <button class="icon-button" type="button" aria-label="Search" id="search-open">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <circle cx="11" cy="11" r="7" />
               <line x1="16.65" y1="16.65" x2="21" y2="21" />
             </svg>
           </button>
-          <button class="primary" type="button" data-i18n data-en="Login" data-kn="ಲಾಗಿನ್"></button>
+          <a class="primary" href="login.html" data-i18n data-en="Login" data-kn="ಲಾಗಿನ್"></a>
         </div>
       </div>
     </header>
@@ -86,9 +82,13 @@
 
       <section class="news-bar" aria-label="Latest news">
         <span class="news-label" data-i18n data-en="Latest News" data-kn="ತಾಜಾ ಸುದ್ದಿ"></span>
-        <div class="news-items">
-          <span data-i18n data-en="Circular related to Commerce examination Online registration of Evaluators" data-kn="ವಾಣಿಜ್ಯ ಪರೀಕ್ಷೆಗೆ ಸಂಬಂಧಿಸಿದ ವಲಯಮಾಪಕರ ಆನ್‌ಲೈನ್ ನೋಂದಣಿ"></span>
-          <span data-i18n data-en="Click here for Revised Time table for State level" data-kn="ರಾಜ್ಯಮಟ್ಟದ ಪರಿಷ್ಕೃತ ವೇಳಾಪಟ್ಟಿಗಾಗಿ ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"></span>
+        <div class="news-marquee" aria-hidden="true">
+          <div class="news-track">
+            <span data-i18n data-en="Circular related to Commerce examination Online registration of Evaluators" data-kn="ವಾಣಿಜ್ಯ ಪರೀಕ್ಷೆಗೆ ಸಂಬಂಧಿಸಿದ ವಲಯಮಾಪಕರ ಆನ್‌ಲೈನ್ ನೋಂದಣಿ"></span>
+            <span data-i18n data-en="Click here for Revised Time table for State level" data-kn="ರಾಜ್ಯಮಟ್ಟದ ಪರಿಷ್ಕೃತ ವೇಳಾಪಟ್ಟಿಗಾಗಿ ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"></span>
+            <span data-i18n data-en="Circular related to Commerce examination Online registration of Evaluators" data-kn="ವಾಣಿಜ್ಯ ಪರೀಕ್ಷೆಗೆ ಸಂಬಂಧಿಸಿದ ವಲಯಮಾಪಕರ ಆನ್‌ಲೈನ್ ನೋಂದಣಿ"></span>
+            <span data-i18n data-en="Click here for Revised Time table for State level" data-kn="ರಾಜ್ಯಮಟ್ಟದ ಪರಿಷ್ಕೃತ ವೇಳಾಪಟ್ಟಿಗಾಗಿ ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ"></span>
+          </div>
         </div>
         <button class="news-button" type="button" data-i18n data-en="Read More" data-kn="ಮತ್ತಷ್ಟು ಓದಿ"></button>
       </section>
@@ -106,6 +106,30 @@
         <div class="about-card">
           <div class="about-letter">K</div>
           <span data-i18n data-en="Est. 1966" data-kn="ಸ್ಥಾಪನೆ 1966"></span>
+        </div>
+        <div class="leader-grid">
+          <article class="leader-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Siddaramaiah.jpg"
+              alt="Shri Siddaramaiah, Hon'ble Chief Minister of Karnataka"
+              loading="lazy"
+            />
+            <div>
+              <h3>SHRI SIDDARAMAIAH</h3>
+              <p data-i18n data-en="Hon'ble Chief Minister | Govt. of Karnataka" data-kn="ಮಾನ್ಯ ಮುಖ್ಯಮಂತ್ರಿ | ಕರ್ನಾಟಕ ಸರ್ಕಾರ"></p>
+            </div>
+          </article>
+          <article class="leader-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/75/Madhu_Bangarappa.jpg"
+              alt="Sri Madhu Bangarappa, Hon'ble Minister for School Education and Literacy"
+              loading="lazy"
+            />
+            <div>
+              <h3>SRI MADHU BANGARAPPA</h3>
+              <p data-i18n data-en="Hon'ble Minister for School Education and Literacy | Government of Karnataka" data-kn="ಮಾನ್ಯ ಶಾಲಾ ಶಿಕ್ಷಣ ಮತ್ತು ಸಾಕ್ಷರತಾ ಸಚಿವ | ಕರ್ನಾಟಕ ಸರ್ಕಾರ"></p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -165,14 +189,14 @@
           </div>
         </div>
         <div class="service-grid">
-          <article class="service-card" id="sslc">
+          <article class="service-card" id="sslc-portal">
             <h3 data-i18n data-en="SSLC Portal" data-kn="ಎಸೆಸ್ಸೆಲ್ಸಿ ಪೋರ್ಟಲ್"></h3>
             <p
               data-i18n
               data-en="Student registration, results, hall tickets, and examination services."
               data-kn="ವಿದ್ಯಾರ್ಥಿ ನೋಂದಣಿ, ಫಲಿತಾಂಶ, ಹಾಲ್ ಟಿಕೆಟ್ ಮತ್ತು ಪರೀಕ್ಷಾ ಸೇವೆಗಳು."
             ></p>
-            <a href="#" data-i18n data-en="Access Service →" data-kn="ಸೇವೆಗೆ ಪ್ರವೇಶ →"></a>
+            <a href="sslc.html" data-i18n data-en="Access Service →" data-kn="ಸೇವೆಗೆ ಪ್ರವೇಶ →"></a>
           </article>
           <article class="service-card">
             <h3 data-i18n data-en="PUC Portal" data-kn="ಪಿಯುಸಿ ಪೋರ್ಟಲ್"></h3>
@@ -181,9 +205,9 @@
               data-en="Pre-University admissions, timetable updates, and results management."
               data-kn="ಪಿಯುಸಿ ಪ್ರವೇಶ, ವೇಳಾಪಟ್ಟಿ ನವೀಕರಣಗಳು ಮತ್ತು ಫಲಿತಾಂಶ ನಿರ್ವಹಣೆ."
             ></p>
-            <a href="#" data-i18n data-en="Access Service →" data-kn="ಸೇವೆಗೆ ಪ್ರವೇಶ →"></a>
+            <a href="puc.html" data-i18n data-en="Access Service →" data-kn="ಸೇವೆಗೆ ಪ್ರವೇಶ →"></a>
           </article>
-          <article class="service-card" id="puc">
+          <article class="service-card" id="puc-portal">
             <h3 data-i18n data-en="Online Services" data-kn="ಆನ್‌ಲೈನ್ ಸೇವೆಗಳು"></h3>
             <p
               data-i18n
@@ -299,36 +323,6 @@
         </div>
       </section>
 
-      <section class="policies" aria-label="Website policies">
-        <div class="policy-grid">
-          <div>
-            <h3 data-i18n data-en="Disclaimer" data-kn="ಹೆಚ್ಚುವರಿ ಸೂಚನೆ"></h3>
-            <p
-              data-i18n
-              data-en="Please note that this page provides links to other websites/web pages of Government departments and organizations. The contents of these websites are owned by the respective organizations and they may be contacted for any further information."
-              data-kn="ಈ ಪುಟವು ಸರ್ಕಾರದ ಇಲಾಖೆಗಳು ಮತ್ತು ಸಂಸ್ಥೆಗಳ ಇತರ ವೆಬ್‌ಸೈಟ್‌ಗಳಿಗೆ ಲಿಂಕ್‌ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ಈ ವೆಬ್‌ಸೈಟ್‌ಗಳ ವಿಷಯವು ಸಂಬಂಧಿತ ಸಂಸ್ಥೆಗಳ ಸ್ವತ್ತಾಗಿದ್ದು, ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಅವರನ್ನು ಸಂಪರ್ಕಿಸಬಹುದು."
-            ></p>
-          </div>
-          <div>
-            <h3 data-i18n data-en="Website Policies" data-kn="ವೆಬ್‌ಸೈಟ್ ನೀತಿಗಳು"></h3>
-            <ul>
-              <li data-i18n data-en="Copyright Policy" data-kn="ಕಾಪಿರೈಟ್ ನೀತಿ"></li>
-              <li data-i18n data-en="Terms & Conditions" data-kn="ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು"></li>
-              <li data-i18n data-en="Privacy Policy" data-kn="ಗೋಪನೀಯತಾ ನೀತಿ"></li>
-              <li data-i18n data-en="Security Policy" data-kn="ಸುರಕ್ಷತಾ ನೀತಿ"></li>
-              <li data-i18n data-en="Screen Reader Access" data-kn="ಸ್ಕ್ರೀನ್ ರೀಡರ್ ಪ್ರವೇಶ"></li>
-              <li data-i18n data-en="Guidelines" data-kn="ಮಾರ್ಗಸೂಚಿಗಳು"></li>
-              <li data-i18n data-en="Help" data-kn="ಸಹಾಯ"></li>
-            </ul>
-          </div>
-          <div>
-            <h3 data-i18n data-en="Visitors" data-kn="ಭೇಟಿದಾರರು"></h3>
-            <p data-i18n data-en="Last Updated: 03-02-2026 02:44 PM" data-kn="ಕೊನೆಯ ನವೀಕರಣ: 03-02-2026 02:44 PM"></p>
-            <p data-i18n data-en="Visitors Counter: 1293281" data-kn="ಭೇಟಿದಾರರ ಎಣಿಕೆ: 1293281"></p>
-            <p data-i18n data-en="Version: CeG/KRN 1.3" data-kn="ಆವೃತ್ತಿ: CeG/KRN 1.3"></p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">
@@ -360,6 +354,34 @@
           <p>080-23349434</p>
         </div>
       </div>
+      <div class="footer-policies">
+        <div>
+          <h4 data-i18n data-en="Disclaimer" data-kn="ಹೆಚ್ಚುವರಿ ಸೂಚನೆ"></h4>
+          <p
+            data-i18n
+            data-en="Please note that this page provides links to other websites/web pages of Government departments and organizations. The contents of these websites are owned by the respective organizations and they may be contacted for any further information."
+            data-kn="ಈ ಪುಟವು ಸರ್ಕಾರದ ಇಲಾಖೆಗಳು ಮತ್ತು ಸಂಸ್ಥೆಗಳ ಇತರ ವೆಬ್‌ಸೈಟ್‌ಗಳಿಗೆ ಲಿಂಕ್‌ಗಳನ್ನು ಒದಗಿಸುತ್ತದೆ. ಈ ವೆಬ್‌ಸೈಟ್‌ಗಳ ವಿಷಯವು ಸಂಬಂಧಿತ ಸಂಸ್ಥೆಗಳ ಸ್ವತ್ತಾಗಿದ್ದು, ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ ಅವರನ್ನು ಸಂಪರ್ಕಿಸಬಹುದು."
+          ></p>
+        </div>
+        <div>
+          <h4 data-i18n data-en="Website Policies" data-kn="ವೆಬ್‌ಸೈಟ್ ನೀತಿಗಳು"></h4>
+          <ul>
+            <li data-i18n data-en="Copyright Policy" data-kn="ಕಾಪಿರೈಟ್ ನೀತಿ"></li>
+            <li data-i18n data-en="Terms & Conditions" data-kn="ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳು"></li>
+            <li data-i18n data-en="Privacy Policy" data-kn="ಗೋಪನೀಯತಾ ನೀತಿ"></li>
+            <li data-i18n data-en="Security Policy" data-kn="ಸುರಕ್ಷತಾ ನೀತಿ"></li>
+            <li data-i18n data-en="Screen Reader Access" data-kn="ಸ್ಕ್ರೀನ್ ರೀಡರ್ ಪ್ರವೇಶ"></li>
+            <li data-i18n data-en="Guidelines" data-kn="ಮಾರ್ಗಸೂಚಿಗಳು"></li>
+            <li data-i18n data-en="Help" data-kn="ಸಹಾಯ"></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n data-en="Visitors" data-kn="ಭೇಟಿದಾರರು"></h4>
+          <p data-i18n data-en="Last Updated: 03-02-2026 02:44 PM" data-kn="ಕೊನೆಯ ನವೀಕರಣ: 03-02-2026 02:44 PM"></p>
+          <p data-i18n data-en="Visitors Counter: 1293281" data-kn="ಭೇಟಿದಾರರ ಎಣಿಕೆ: 1293281"></p>
+          <p data-i18n data-en="Version: CeG/KRN 1.3" data-kn="ಆವೃತ್ತಿ: CeG/KRN 1.3"></p>
+        </div>
+      </div>
       <div class="footer-bottom">
         <span>© 2025 KSEAB. All rights reserved.</span>
         <div>
@@ -369,9 +391,38 @@
       </div>
     </footer>
 
+    <div class="search-modal" id="search-modal" aria-hidden="true">
+      <div class="search-backdrop" data-search-close></div>
+      <div class="search-panel" role="dialog" aria-modal="true" aria-label="Search">
+        <div class="search-header">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16.65" y1="16.65" x2="21" y2="21" />
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for services, circulars, or pages..."
+            autocomplete="off"
+          />
+          <span class="search-esc">ESC</span>
+        </div>
+        <div class="search-body" id="search-results">
+          <div class="search-empty">
+            <div class="search-icon">⌘</div>
+            <p data-i18n data-en="Type to search across the entire portal" data-kn="ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಹುಡುಕಲು ಟೈಪ್ ಮಾಡಿ"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const toggleButton = document.getElementById("lang-toggle");
       const i18nElements = document.querySelectorAll("[data-i18n]");
+      const searchOpen = document.getElementById("search-open");
+      const searchModal = document.getElementById("search-modal");
+      const searchInput = document.getElementById("search-input");
+      const searchResults = document.getElementById("search-results");
 
       const setLanguage = (lang) => {
         i18nElements.forEach((element) => {
@@ -387,6 +438,78 @@
       toggleButton.addEventListener("click", () => {
         const nextLang = toggleButton.dataset.lang === "en" ? "kn" : "en";
         setLanguage(nextLang);
+      });
+
+      const searchItems = [
+        { label: "Dashboard", type: "Page", href: "index.html" },
+        { label: "SSLC Examination", type: "Page", href: "sslc.html" },
+        { label: "PUC Examination", type: "Page", href: "puc.html" },
+        { label: "Contact Us", type: "Section", href: "#contact" },
+        { label: "About KSEAB", type: "Section", href: "#about" },
+        { label: "Online Services", type: "Section", href: "#services" },
+        { label: "SSLC Time Table", type: "Quick Link", href: "sslc.html" },
+        { label: "PUC Results", type: "Quick Link", href: "puc.html" }
+      ];
+
+      const renderSearchResults = (query) => {
+        const filtered = searchItems.filter((item) =>
+          item.label.toLowerCase().includes(query.toLowerCase())
+        );
+        if (!query) {
+          searchResults.innerHTML = `
+            <div class="search-empty">
+              <div class="search-icon">⌘</div>
+              <p data-i18n data-en="Type to search across the entire portal" data-kn="ಪೋರ್ಟಲ್‌ನಲ್ಲಿ ಹುಡುಕಲು ಟೈಪ್ ಮಾಡಿ"></p>
+            </div>`;
+          setLanguage(toggleButton.dataset.lang);
+          return;
+        }
+        if (!filtered.length) {
+          searchResults.innerHTML = `<p class="search-none">No results found.</p>`;
+          return;
+        }
+        searchResults.innerHTML = filtered
+          .map(
+            (item) => `
+            <a class="search-item" href="${item.href}">
+              <div class="search-badge">⌘</div>
+              <div>
+                <strong>${item.label}</strong>
+                <span>${item.type}</span>
+              </div>
+            </a>`
+          )
+          .join("");
+      };
+
+      const openSearch = () => {
+        searchModal.classList.add("open");
+        searchModal.setAttribute("aria-hidden", "false");
+        searchInput.value = "";
+        renderSearchResults("");
+        setTimeout(() => searchInput.focus(), 100);
+      };
+
+      const closeSearch = () => {
+        searchModal.classList.remove("open");
+        searchModal.setAttribute("aria-hidden", "true");
+      };
+
+      searchOpen.addEventListener("click", openSearch);
+      searchModal.addEventListener("click", (event) => {
+        if (event.target.matches("[data-search-close]")) {
+          closeSearch();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && searchModal.classList.contains("open")) {
+          closeSearch();
+        }
+      });
+
+      searchInput.addEventListener("input", (event) => {
+        renderSearchResults(event.target.value);
       });
 
       setLanguage("en");
