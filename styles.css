@@ -239,9 +239,16 @@ button {
 }
 
 .hero-image {
-  background: #b9b0b0;
+  background: #f1ece9;
   height: 320px;
   border: 1px solid #c8c0bd;
+  display: grid;
+  place-items: center;
+}
+
+.hero-image img {
+  width: min(260px, 70%);
+  height: auto;
 }
 
 .hero-card {
@@ -1049,15 +1056,6 @@ button {
 @media (max-width: 900px) {
   .main-nav {
     display: none;
-    position: absolute;
-    top: 72px;
-    right: 24px;
-    background: #f0ece9;
-    border: 1px solid #c4bdb9;
-    padding: 16px 20px;
-    flex-direction: column;
-    gap: 14px;
-    box-shadow: var(--shadow);
   }
 
   .nav-shell {
@@ -1069,7 +1067,21 @@ button {
     display: flex;
   }
 
-  body.nav-open .main-nav {
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    right: 24px;
+    background: #f0ece9;
+    border: 1px solid #c4bdb9;
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--shadow);
+    z-index: 20;
+  }
+
+  body.nav-open .mobile-nav {
     display: flex;
   }
 

@@ -28,11 +28,26 @@
           <a href="#gallery" data-i18n data-en="Gallery" data-kn="ಗ್ಯಾಲರಿ"></a>
           <a href="#contact" data-i18n data-en="Contact" data-kn="ಸಂಪರ್ಕ"></a>
         </nav>
-        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Open menu">
+        <button
+          class="nav-toggle"
+          type="button"
+          id="nav-toggle"
+          aria-label="Open menu"
+          aria-controls="mobile-nav"
+          aria-expanded="false"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
+        <nav class="mobile-nav" id="mobile-nav" aria-hidden="true">
+          <a href="#about" data-i18n data-en="About" data-kn="ನಮ್ಮ ಬಗ್ಗೆ"></a>
+          <a href="sslc.html" data-i18n data-en="SSLC" data-kn="ಎಸೆಸ್ಸೆಲ್ಸಿ"></a>
+          <a href="puc.html" data-i18n data-en="PUC" data-kn="ಪಿಯುಸಿ"></a>
+          <a href="#services" data-i18n data-en="Services" data-kn="ಸೇವೆಗಳು"></a>
+          <a href="#gallery" data-i18n data-en="Gallery" data-kn="ಗ್ಯಾಲರಿ"></a>
+          <a href="#contact" data-i18n data-en="Contact" data-kn="ಸಂಪರ್ಕ"></a>
+        </nav>
         <div class="nav-actions">
           <button class="chip" type="button" id="lang-toggle" data-lang="en">English</button>
           <button class="icon-button" type="button" aria-label="Search" id="search-open">
@@ -41,7 +56,7 @@
               <line x1="16.65" y1="16.65" x2="21" y2="21" />
             </svg>
           </button>
-          <a class="primary" href="login.html" data-i18n data-en="Login" data-kn="ಲಾಗಿನ್"></a>
+          <a class="primary" href="https://kseab.karnataka.gov.in/login" data-i18n data-en="Login" data-kn="ಲಾಗಿನ್"></a>
         </div>
       </div>
     </header>
@@ -81,7 +96,9 @@
             <span class="stat">8.4L+</span>
             <span class="label" data-i18n data-en="Students Registered" data-kn="ನೋಂದಾಯಿತ ವಿದ್ಯಾರ್ಥಿಗಳು"></span>
           </div>
-          <div class="hero-image" role="presentation"></div>
+          <div class="hero-image" role="presentation">
+            <img src="images/logo.png" alt="KSEAB Logo" loading="lazy" />
+          </div>
         </div>
       </section>
 
@@ -109,12 +126,12 @@
           ></p>
         </div>
         <div class="about-card logo-card">
-          <img src="KSEAB.jpg" alt="KSEAB Logo" loading="lazy" />
+          <img src="images/KSEAB.jpg" alt="KSEAB Logo" loading="lazy" />
         </div>
         <div class="leader-grid">
           <article class="leader-card">
             <img
-              src="CM.jpg"
+              src="images/CM.jpg"
               alt="Shri Siddaramaiah, Hon'ble Chief Minister of Karnataka"
               loading="lazy"
             />
@@ -125,7 +142,7 @@
           </article>
           <article class="leader-card">
             <img
-              src="E.jpg"
+              src="images/E.jpg"
               alt="Sri Madhu Bangarappa, Hon'ble Minister for School Education and Literacy"
               loading="lazy"
             />
@@ -456,8 +473,11 @@
       ];
 
       const navToggle = document.getElementById("nav-toggle");
+      const mobileNav = document.getElementById("mobile-nav");
       navToggle.addEventListener("click", () => {
-        document.body.classList.toggle("nav-open");
+        const isOpen = document.body.classList.toggle("nav-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        mobileNav.setAttribute("aria-hidden", String(!isOpen));
       });
 
       const renderSearchResults = (query) => {
