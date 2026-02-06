@@ -110,6 +110,22 @@ button {
   align-items: center;
 }
 
+.nav-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: #2a1a1b;
+  display: block;
+}
+
 .primary,
 .secondary {
   border: none;
@@ -1033,10 +1049,28 @@ button {
 @media (max-width: 900px) {
   .main-nav {
     display: none;
+    position: absolute;
+    top: 72px;
+    right: 24px;
+    background: #f0ece9;
+    border: 1px solid #c4bdb9;
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 14px;
+    box-shadow: var(--shadow);
   }
 
   .nav-shell {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  body.nav-open .main-nav {
+    display: flex;
   }
 
   .news-bar {

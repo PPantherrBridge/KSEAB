@@ -28,6 +28,11 @@
           <a href="index.html#gallery" data-i18n data-en="Gallery" data-kn="ಗ್ಯಾಲರಿ"></a>
           <a href="index.html#contact" data-i18n data-en="Contact" data-kn="ಸಂಪರ್ಕ"></a>
         </nav>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-actions">
           <button class="chip" type="button" id="lang-toggle" data-lang="en">English</button>
           <button class="icon-button" type="button" aria-label="Search" id="search-open">
@@ -205,6 +210,11 @@
         { label: "SSLC Time Table", type: "Quick Link", href: "sslc.html" },
         { label: "PUC Results", type: "Quick Link", href: "puc.html" }
       ];
+
+      const navToggle = document.getElementById("nav-toggle");
+      navToggle.addEventListener("click", () => {
+        document.body.classList.toggle("nav-open");
+      });
 
       const renderSearchResults = (query) => {
         const filtered = searchItems.filter((item) =>
