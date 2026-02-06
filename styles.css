@@ -347,10 +347,12 @@ button {
   font-family: "Instrument Serif", serif;
   color: #a79c98;
   position: relative;
+  border-radius: 16px;
 }
 
-.about-letter {
-  font-size: 80px;
+.logo-card img {
+  width: min(180px, 70%);
+  height: auto;
 }
 
 .leader-grid {
