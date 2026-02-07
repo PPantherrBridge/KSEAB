@@ -110,6 +110,10 @@ button {
   align-items: center;
 }
 
+.mobile-nav {
+  display: none;
+}
+
 .nav-toggle {
   display: none;
   border: none;
